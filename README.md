@@ -5,8 +5,8 @@
 
 
 - Wiki links:
-   Protótipo, mapa de navegação e descrição:
+  1. Protótipo, mapa de navegação e descrição:
 https://github.com/FlaviaAMorgado/RoleFlix1.wiki.git
-  Widgets utilizadas e suas implementações: 
+ 2.  Widgets utilizadas e suas implementações: 
 https://github.com/FlaviaAMorgado/RoleFlix1.wiki.git
 
