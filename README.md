@@ -8,5 +8,5 @@
 1. Protótipo, mapa de navegação e descrição:
 [https://github.com/FlaviaAMorgado/RoleFlix1.wiki.git](https://github.com/FlaviaAMorgado/RoleFlix1/wiki/Prot%C3%B3tipo,-mapa-e-descri%C3%A7%C3%A3o)
 2.  Widgets utilizadas e suas implementações: 
-https://github.com/FlaviaAMorgado/RoleFlix1.wiki.git
-
+[https://github.com/FlaviaAMorgado/RoleFlix1.wiki.git
+](https://github.com/FlaviaAMorgado/RoleFlix1/wiki/Widgets-e-principais-parametros)
