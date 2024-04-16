@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:roleflix/principal.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(const MaterialApp (title: "AppRoleFlix",
+      home: MainApp(),));
 }
 
 class MainApp extends StatelessWidget {
@@ -20,7 +22,11 @@ class MainApp extends StatelessWidget {
           ),
           child: Center(
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed:() {
+                Navigator.push (context,
+                 MaterialPageRoute(builder: (context)=> const Principal()),
+                 );
+              },
               child: Image(image: AssetImage("img/btnEntrar")),
             ),
           )),

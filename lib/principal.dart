@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:roleflix/main.dart';
 
 class Principal extends StatelessWidget {
-  const Principal({super.key});
+const Principal({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +28,10 @@ class Principal extends StatelessWidget {
                 ),
                 ElevatedButton(
                   onPressed: () {
-                    // Botão que voltará ´para a tela anterior
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const MainApp()),
+                        ); // Botão que voltará ´para a tela anterior
                   },
                   child: const Text('Voltar!'),
                 ),
