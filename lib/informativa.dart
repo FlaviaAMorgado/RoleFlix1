@@ -5,21 +5,22 @@ class Informativa extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Tela Informativa'),
-      ),
-      body: const DecoratedBox(
-        // BoxDecoration takes the image
-        decoration: BoxDecoration(
-          // Image set to background of the body
-          image: DecorationImage(
-            image: AssetImage("img/backInformativa.png"),
-            fit: BoxFit.cover,
-          ),
-          
-        ),
-      ),
-    );
+    return MaterialApp(
+        title: "AppRoleFlix",
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text('Tela Informativa'),
+            ),
+            // ignore: prefer_const_constructors
+            body: DecoratedBox(
+              // BoxDecoration takes the image
+              decoration: const BoxDecoration(
+                // Image set to background of the body
+                image: DecorationImage(
+                  image: AssetImage("img/backInformativa.png"),
+                  fit: BoxFit.cover,
+                ),
+              ),
+            )));
   }
 }
