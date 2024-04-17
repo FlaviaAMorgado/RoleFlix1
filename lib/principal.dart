@@ -1,8 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:roleflix/informativa.dart';
 import 'package:roleflix/main.dart';
 
 class Principal extends StatelessWidget {
-const Principal({super.key});
+  const Principal({super.key});
+
+  void main() {
+    runApp(const MaterialApp(
+      title: "AppRoleFlix",
+      home: Principal(),
+    ));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,23 +27,18 @@ const Principal({super.key});
                   fit: BoxFit.cover),
             ),
             child: Center(
-              child: Column(children: [
-                const Text("Dados Recebidos"),
-                Image.asset(
-                  'img/img02.jpg',
-                  width: 220,
-                  height: 220,
-                ),
-                ElevatedButton(
-                  onPressed: () {
-                    Navigator.push(
-                        context,
-                        MaterialPageRoute(builder: (context) => const MainApp()),
-                        ); // Botão que voltará ´para a tela anterior
-                  },
-                  child: const Text('Voltar!'),
-                ),
-              ]),
+              child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => const Informativa()),
+                  );
+                },
+                style: ButtonStyle(
+                    minimumSize: MaterialStateProperty.all(Size(8, 20))),
+                child: Image(image: AssetImage("img/peca1.png")),
+              ),
             )));
   }
 }
