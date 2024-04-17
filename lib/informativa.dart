@@ -9,18 +9,15 @@ class Informativa extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Tela Informativa'),
       ),
-      body: DecoratedBox(
+      body: const DecoratedBox(
         // BoxDecoration takes the image
         decoration: BoxDecoration(
           // Image set to background of the body
           image: DecorationImage(
-              image: AssetImage("img/backInformativa.png"), fit: BoxFit.cover),
-        ),
-        child: ElevatedButton(
-          onPressed: () {
-            // Botão que voltará ´para a tela anterior
-          },
-          child: const Text('Voltar!'),
+            image: AssetImage("img/backInformativa.png"),
+            fit: BoxFit.cover,
+          ),
+          
         ),
       ),
     );
