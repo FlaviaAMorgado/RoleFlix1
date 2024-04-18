@@ -9,9 +9,7 @@ class Principal extends StatelessWidget {
     return MaterialApp(
       title: "AppRoleFlix",
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Segunda Tela'),
-        ),
+      
         body: DecoratedBox(
           // BoxDecoration takes the image
           decoration: const BoxDecoration(
@@ -32,7 +30,7 @@ class Principal extends StatelessWidget {
               child: Container(
                 width: 1000,
                 height: 1000,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   shape: BoxShape.circle,
                   image: DecorationImage(
                     image: AssetImage('img/peca1.png'),

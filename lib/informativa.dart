@@ -9,18 +9,19 @@ class Informativa extends StatelessWidget {
         title: "AppRoleFlix",
         home: Scaffold(
             appBar: AppBar(
-              title: Text('Tela Informativa'),
+              title: const Text('Tela Informativa'),
             ),
             // ignore: prefer_const_constructors
             body: DecoratedBox(
-              // BoxDecoration takes the image
-              decoration: const BoxDecoration(
-                // Image set to background of the body
-                image: DecorationImage(
-                  image: AssetImage("img/backInformativa.png"),
-                  fit: BoxFit.cover,
+                // BoxDecoration takes the image
+                decoration: const BoxDecoration(
+                  // Image set to background of the body
+                  image: DecorationImage(
+                    image: AssetImage("img/backInformativa.png"),
+                    fit: BoxFit.cover,
+                  ),
                 ),
-              ),
-            )));
+                child: const Center(
+                    child: Column(children: <Widget>[Text("Teste")])))));
   }
 }
