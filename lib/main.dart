@@ -35,8 +35,8 @@ class MainApp extends StatelessWidget {
               ),
             child: Image.asset(
               "img/btnEntrar.png",
-              width: 200,
-              height: 200,
+              width: 150,
+              height: 150,
               fit: BoxFit.cover,
             ),
           ),

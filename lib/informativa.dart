@@ -8,20 +8,32 @@ class Informativa extends StatelessWidget {
     return MaterialApp(
         title: "AppRoleFlix",
         home: Scaffold(
-            appBar: AppBar(
-              title: const Text('Tela Informativa'),
-            ),
             // ignore: prefer_const_constructors
-            body: DecoratedBox(
-                // BoxDecoration takes the image
-                decoration: const BoxDecoration(
-                  // Image set to background of the body
-                  image: DecorationImage(
-                    image: AssetImage("img/backInformativa.png"),
-                    fit: BoxFit.cover,
+            body: 
+            Center(
+              child: Container(
+                width: 700,
+                height: 100,
+                color: const Color.fromARGB(255, 202, 21, 8),
+               child: Column (
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: <Widget>[
+                Image.asset('img/poster.png'),
+                Text(
+                  'da certo por favor',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 24,
                   ),
                 ),
-                child: const Center(
-                    child: Column(children: <Widget>[Text("Teste")])))));
+              ],
+                ),
+              )
+            )
+        )
+        );
+    
+
+
   }
 }
