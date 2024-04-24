@@ -79,7 +79,7 @@ class Informativa extends StatelessWidget {
                     color: Color.fromARGB(226, 250, 188, 89),
                     fontSize: 16,
                     fontWeight: FontWeight.bold,
-                    fontFamily: 'Open Sans',
+                    fontFamily: 'Arial',
                   ),
 
                 ),
