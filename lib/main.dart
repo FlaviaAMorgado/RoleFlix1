@@ -17,7 +17,7 @@ class MainApp extends StatelessWidget {
       home: Scaffold(
           body: DecoratedBox(
         // BoxDecoration takes the image
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           // Image set to background of the body
           image: DecorationImage(
               image: AssetImage("img/inicial.png"), fit: BoxFit.cover),

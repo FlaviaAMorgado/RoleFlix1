@@ -9,29 +9,41 @@ class Informativa extends StatelessWidget {
         title: "AppRoleFlix",
         home: Scaffold(
             // ignore: prefer_const_constructors
-            body: 
-            Center(
-              child: Container(
-                width: 700,
-                height: 100,
+            body: DecoratedBox(
+        // BoxDecoration takes the image
+        decoration: const BoxDecoration(
+          // Image set to background of the body
+          image: DecorationImage(
+              image: AssetImage("img/backInformativa.png"), fit: BoxFit.cover),
+        ),
+            child: Center(
+              child: ClipRRect(borderRadius: BorderRadius.circular(30),
+               child: Container(
+                width: 450,
+                height: 550,
                 color: const Color.fromARGB(255, 202, 21, 8),
                child: Column (
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.start, // para alinhar 
                 children: <Widget>[
-                Image.asset('img/poster.png'),
-                Text(
-                  'da certo por favor',
+                Image.asset('img/poster.jpg', width: 400, height: 250, fit: BoxFit.cover,),
+                const Text(
+                  "Alice, uma menina que adormece lendo sob uma árvore, acorda em um mundo imaginativo. Ela segue um coelho branco até sua toca na floresta, onde encontra personagens falantes como um Pássaro Marinheiro, um Fantasminha Camarada, uma Porta Falante, um Bruxo atrevido e a Rainha de Copas, que traz muita confusão para a história",
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 24,
+                    fontSize: 18,
+
+                   // textAlign: TextAlign.justify,
                   ),
                 ),
               ],
                 ),
               )
+              )
+             
             )
         )
-        );
+    )
+    );
     
 
 
