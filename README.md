@@ -10,3 +10,5 @@
 2.  Widgets utilizadas e suas implementações: 
 [https://github.com/FlaviaAMorgado/RoleFlix1.wiki.git
 ](https://github.com/FlaviaAMorgado/RoleFlix1/wiki/Widgets-e-principais-parametros)
+
+3. Vídeo do funcionamento do App: [https://github.com/FlaviaAMorgado/RoleFlix1/wiki/V%C3%ADdeo]
