@@ -5,6 +5,7 @@ class Peca {
   final String Temporada;
   final String Local;
   final String Data;
+  final String PacaImg;
 
- const Peca( this.ID, this.Nome,  this.DescDet, this.Temporada,  this.Local,this.Data);
+ const Peca( this.ID, this.Nome,  this.DescDet, this.Temporada,this.Local, this.Data, this.PacaImg);
 }
