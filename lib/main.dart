@@ -22,6 +22,8 @@ class MainApp extends StatelessWidget {
           image: DecorationImage(
               image: AssetImage("img/inicial.png"), fit: BoxFit.cover),
         ),
+
+        
         child: Center(
           child: ElevatedButton(
             onPressed: () {
