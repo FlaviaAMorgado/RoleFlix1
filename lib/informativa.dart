@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:roleflix/lista.dart';
 
 class Informativa extends StatelessWidget {
   const Informativa({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final peca = ModalRoute.of(context)!.settings.arguments as Peca;
     return MaterialApp(
         title: "AppRoleFlix",
         home: Scaffold(
@@ -17,12 +19,12 @@ class Informativa extends StatelessWidget {
               image: AssetImage("img/backInformativa.png"), fit: BoxFit.cover),
         ),
         
+        
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget> [const Text(
-                   "Alice no País das Maravilhas",
-                   style: TextStyle(
+                          children: <Widget> [ Text(peca.Nome,
+                   style: const TextStyle(
                      color:  Color.fromARGB(226, 250, 188, 89),
                      fontWeight: FontWeight.bold,
                      fontSize: 40, 
@@ -42,21 +44,10 @@ class Informativa extends StatelessWidget {
                    const SizedBox(height: 20,), //espaço
                  Image.asset('img/poster.jpg', width: 400, height: 250, fit: BoxFit.cover,),
                  const SizedBox(height: 10,),
-                 const Text(
-                   "Classificação: A partir 3 anos",
-                   softWrap: true,
-                   style: TextStyle(
-                     color: Color.fromARGB(226, 250, 188, 89),
-                     fontSize: 16,
-                     fontWeight: FontWeight.bold,
-                     fontFamily: 'Open Sans',
-                   ),
-               
-                 ),
+                 
                  const SizedBox(height: 3,),
-                 const Text(
-                   "Alice, uma menina que adormece lendo sob uma árvore, acorda em um mundo imaginativo. Ela segue um coelho branco até sua toca na floresta, onde encontra personagens falantes como um Pássaro Marinheiro, um Fantasminha Camarada, uma Porta Falante, um Bruxo atrevido e a Rainha de Copas, que traz muita confusão para a história.",
-                   style: TextStyle(
+                  Text(peca.DescDet,
+                   style: const TextStyle(
                      color: Colors.white,
                      fontSize: 16, 
                      fontFamily: 'Open Sans',
@@ -65,7 +56,7 @@ class Informativa extends StatelessWidget {
                
                  const SizedBox(height: 5,),
                  const Text(
-                   "Elenco:",
+                   "Temporada:",
                    softWrap: true,
                    style: TextStyle(
                      color: Color.fromARGB(226, 250, 188, 89),
@@ -76,9 +67,9 @@ class Informativa extends StatelessWidget {
                
                  ),
                  const SizedBox(height: 3,),
-                 const Text(
-                   "Talytha Pugliesi, Thiago Tavares, Fani Feldman, Renan Ferraz e Álvaro Franco.",
-                   style: TextStyle(
+                  Text(
+                   peca.Temporada,
+                   style: const TextStyle(
                      color: Colors.white,
                      fontSize: 16, 
                      fontFamily: 'Open Sans',
@@ -98,9 +89,19 @@ class Informativa extends StatelessWidget {
                
                  ),
                  const SizedBox(height: 3,),
-                 const Text(
-                   "Teatro Augusta: De quarta a domingo, das 14h às 21h.",
-                   style: TextStyle(
+                 Text(
+                   peca.Local,
+                   style: const TextStyle(
+                     color: Colors.white,
+                     fontSize: 16, 
+                     fontFamily: 'Open Sans',
+                   ),
+                 ),
+
+                 const SizedBox(height: 3,),
+                 Text(
+                   peca.Data,
+                   style: const TextStyle(
                      color: Colors.white,
                      fontSize: 16, 
                      fontFamily: 'Open Sans',
