@@ -11,8 +11,8 @@ class Principal extends StatefulWidget {
 
 class _PrincipalState extends State<Principal> {
   List<Peca> pecas = <Peca>[
-    const Peca(1, "Sobre Ratos e Homens", "Lorem Ipsun", "Até 30 de Junho", "Teatro FAAP", "Quartas e Quintas as 20h", "img/poster.jpg"),
-    const Peca(2, "Singing in the Rain", "Lorem Ipsun", "Indisponivel", "Bela Vista", "Quarta a sexta as 20h", "img/poster.jpg")
+    const Peca(1, "Sobre Ratos e Homens", "Lorem Ipsun", "Até 30 de Junho", "Teatro FAAP", "Quartas e Quintas as 20h", "img/ratoehomensposter"),
+    const Peca(2, "Singing in the Rain", "Lorem Ipsun", "Indisponivel", "Bela Vista", "Quarta a sexta as 20h", "img/singinposter.jpg")
   ];
 
   @override
@@ -41,15 +41,15 @@ class _PrincipalState extends State<Principal> {
                     color:  const Color.fromARGB(255, 202, 21, 8),
                     child: ListTile(
                       title: Padding(
-                        padding: const EdgeInsets.all(5), //define o espeçamento entre o conteudo e a borda do list
+                        padding: const EdgeInsets.all(3), //define o espeçamento entre o conteudo e a borda do list
                         child: Row(
                           children: [
                             ClipRRect(
                             borderRadius: BorderRadius.circular(10), // arredonda os catos
                             child: Image.asset(
                               pecas[index].PacaImg, // Caminho para a imagem
-                              width: 60, // Largura da imagem
-                              height: 60, // Altura da imagem
+                              width: 80, // Largura da imagem
+                              height: 80, // Altura da imagem
                               fit: BoxFit.cover,
                               ),
                             ),
