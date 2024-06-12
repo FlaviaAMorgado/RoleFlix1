@@ -33,7 +33,7 @@ class Informativa extends StatelessWidget {
               
                child: Container(
                  width: 450,
-                 height: 590,
+                 height: 900,
                  margin: const EdgeInsets.fromLTRB(20, 30, 20, 0),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(30),
@@ -47,13 +47,13 @@ class Informativa extends StatelessWidget {
                      color:  Color.fromARGB(226, 250, 188, 89),
                      fontWeight: FontWeight.bold,
                      fontSize: 30, 
-                     fontFamily: 'Forum',
+                     fontFamily: 'Forum', 
                    )
                  ),
 
                    const SizedBox(height: 10,), //espaço
                  ClipRRect(borderRadius: BorderRadius.circular(20),
-                 child: Image.asset('img/poster.jpg',
+                 child: Image.asset(peca.PacaImg,
                   width: 300,
                    height: 300, 
                    fit: BoxFit.cover,),),
@@ -63,7 +63,7 @@ class Informativa extends StatelessWidget {
                   Text(peca.DescDet,
                    style: const TextStyle(
                      color: Colors.white,
-                     fontSize: 18, 
+                     fontSize: 15, 
                      fontFamily: 'Open Sans',
                    )
                  ),

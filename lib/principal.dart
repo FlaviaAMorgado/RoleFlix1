@@ -3,16 +3,20 @@ import 'package:roleflix/informativa.dart';
 import 'package:roleflix/lista.dart';
 
 class Principal extends StatefulWidget {
-  const Principal({Key? key}) : super(key: key);
+  const Principal({super.key});
 
   @override
+  // ignore: library_private_types_in_public_api
   _PrincipalState createState() => _PrincipalState();
 }
 
+const descDet1 = 'A peça, inspirada no livro do estadunidense John Steinbeck, narra a amizade entre dois trabalhadores rurais da Califórnia durante a Grande Depressão Americana. George, esperto e ágil, e Lennie, forte e ingênuo, unem-se pelo sonho de comprar um pedaço de terra onde possam viver. A trama explora a profunda amizade entre os dois, os desafios decorrentes de suas circunstâncias e do preconceito da época. Temas centrais incluem a busca pelo sonho americano, a solidão, a vulnerabilidade dos trabalhadores itinerantes e a complexidade das relações humanas.';
+const descDet2 = '"Cantando na Chuva" é a versão teatral do famoso filme musical de 1952, conhecido por seus icônicos números de dança e sapateado. Ambientado na transição dos filmes mudos para o cinema falado, o espetáculo segue a história de Don Lockwood, uma estrela do cinema mudo, e sua parceira Lina Lamont, cuja voz não é adequada para os filmes falados. Com a ajuda de seus amigos, Don precisa superar os desafios dessa nova era do cinema. A produção é repleta de coreografias elaboradas, canções memoráveis e cenários deslumbrantes, proporcionando uma experiência nostálgica e encantadora';
+
 class _PrincipalState extends State<Principal> {
   List<Peca> pecas = <Peca>[
-    const Peca(1, "Sobre Ratos e Homens", "Lorem Ipsun", "Até 30 de Junho", "Teatro FAAP", "Quartas e Quintas as 20h", "img/ratoehomensposter"),
-    const Peca(2, "Singing in the Rain", "Lorem Ipsun", "Indisponivel", "Bela Vista", "Quarta a sexta as 20h", "img/singinposter.jpg")
+    const Peca(1, "Sobre Ratos e Homens", descDet1, "Até 30 de Junho", "Teatro FAAP", "Quartas e Quintas as 20h", "img/rato.jpeg"),
+    const Peca(2, "Singing in the Rain", descDet2, "Indisponivel", "Bela Vista", "Quarta a sexta as 20h", "img/singinPoster.jpg")
   ];
 
   @override
@@ -28,6 +32,7 @@ class _PrincipalState extends State<Principal> {
             ),
           ),
           child: Center(
+            // ignore: sized_box_for_whitespace
             child: Container(
               width: MediaQuery.of(context).size.width * 0.8,
               child: ListView.builder( //cria a visualização da lista
@@ -53,11 +58,11 @@ class _PrincipalState extends State<Principal> {
                               fit: BoxFit.cover,
                               ),
                             ),
-                            SizedBox(width: 10),
+                            const SizedBox(width: 10),
                             Expanded(
                               child: Text(
                                 pecas[index].Nome,
-                                style: TextStyle( //estilo
+                                style: const TextStyle( //estilo
                                   color: Color.fromARGB(226, 250, 188, 89),
                                   fontSize: 18,
                                   fontWeight: FontWeight.bold, 
