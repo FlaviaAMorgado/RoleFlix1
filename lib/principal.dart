@@ -3,14 +3,13 @@ import 'package:roleflix/informativa.dart';
 import 'package:roleflix/lista.dart';
 
 class Principal extends StatefulWidget {
-  const Principal({super.key});
+  const Principal({Key? key}) : super(key: key);
 
   @override
-  PrincipalState createState() => PrincipalState();
+  _PrincipalState createState() => _PrincipalState();
 }
 
-//LISTA DE PAÇAS
-class PrincipalState extends State<Principal> {
+class _PrincipalState extends State<Principal> {
   List<Peca> pecas = <Peca>[
     const Peca(1, "Sobre Ratos e Homens", "Lorem Ipsun", "Até 30 de Junho", "Teatro FAAP", "Quartas e Quintas as 20h", "img/poster.jpg"),
     const Peca(2, "Singing in the Rain", "Lorem Ipsun", "Indisponivel", "Bela Vista", "Quarta a sexta as 20h", "img/poster.jpg")
@@ -28,29 +27,65 @@ class PrincipalState extends State<Principal> {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            children: [
-              ListView.builder( //cria a visualização da lista
+          child: Center(
+            child: Container(
+              width: MediaQuery.of(context).size.width * 0.8,
+              child: ListView.builder( //cria a visualização da lista
                 itemCount: pecas.length,
                 shrinkWrap: true,
-                padding: const EdgeInsets.all(5),
+                padding: const EdgeInsets.all(9),
                 scrollDirection: Axis.vertical,
-                // ignore: avoid_types_as_parameter_names, non_constant_identifier_names
-                itemBuilder: (BuildContext, index){
-                  return Card( //Configura as cedulas da lista
+                itemBuilder: (BuildContext context, int index) {
+                  
+                  return Card(//Configura as cedulas da lista
+                    color:  const Color.fromARGB(255, 202, 21, 8),
                     child: ListTile(
-                      title: Text(pecas[index].Nome), //titulo da cedula
-                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Informativa(), //a ação ao ser clicada
-                      settings: RouteSettings(arguments: pecas[index])))//Parametros que ela vai enviar para a proxima teka
-                      ,
+                      title: Padding(
+                        padding: const EdgeInsets.all(5), //define o espeçamento entre o conteudo e a borda do list
+                        child: Row(
+                          children: [
+                            ClipRRect(
+                            borderRadius: BorderRadius.circular(10), // arredonda os catos
+                            child: Image.asset(
+                              pecas[index].PacaImg, // Caminho para a imagem
+                              width: 60, // Largura da imagem
+                              height: 60, // Altura da imagem
+                              fit: BoxFit.cover,
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Expanded(
+                              child: Text(
+                                pecas[index].Nome,
+                                style: TextStyle( //estilo
+                                  color: Color.fromARGB(226, 250, 188, 89),
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.bold, 
+                                  fontFamily: 'Open Sans',
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      //INTENT
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Informativa(),
+                          settings: RouteSettings(arguments: pecas[index]),
+                        ),
+                      ),
                     ),
                   );
                 },
-              )
-            ],
+              ),
+            ),
           ),
         ),
       ),
     );
   }
 }
+
+

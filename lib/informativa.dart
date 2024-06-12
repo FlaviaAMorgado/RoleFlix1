@@ -53,7 +53,10 @@ class Informativa extends StatelessWidget {
 
                    const SizedBox(height: 10,), //espaço
                  ClipRRect(borderRadius: BorderRadius.circular(20),
-                 child: Image.asset('img/poster.jpg', width: 300, height: 300, fit: BoxFit.cover,),),
+                 child: Image.asset('img/poster.jpg',
+                  width: 300,
+                   height: 300, 
+                   fit: BoxFit.cover,),),
                  const SizedBox(height: 10,),
                  
                  const SizedBox(height: 3,),
