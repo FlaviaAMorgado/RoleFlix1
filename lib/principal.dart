@@ -30,18 +30,18 @@ class PrincipalState extends State<Principal> {
           ),
           child: Column(
             children: [
-              ListView.builder(
+              ListView.builder( //cria a visualização da lista
                 itemCount: pecas.length,
                 shrinkWrap: true,
                 padding: const EdgeInsets.all(5),
                 scrollDirection: Axis.vertical,
                 // ignore: avoid_types_as_parameter_names, non_constant_identifier_names
                 itemBuilder: (BuildContext, index){
-                  return Card(
+                  return Card( //Configura as cedulas da lista
                     child: ListTile(
-                      title: Text(pecas[index].Nome),
-                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Informativa(),
-                      settings: RouteSettings(arguments: pecas[index])))
+                      title: Text(pecas[index].Nome), //titulo da cedula
+                      onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context) => const Informativa(), //a ação ao ser clicada
+                      settings: RouteSettings(arguments: pecas[index])))//Parametros que ela vai enviar para a proxima teka
                       ,
                     ),
                   );

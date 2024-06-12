@@ -11,7 +11,10 @@ class Informativa extends StatelessWidget {
         title: "AppRoleFlix",
         home: Scaffold(
             // ignore: prefer_const_constructors
-            body: DecoratedBox(
+            body: SingleChildScrollView( //Configuração da ScrollView
+              child: //SingleChild's só aceitam uma child, normalmente sendo um tipo de layout, no caso sendo uma column
+              Column(children: <Widget>[ //as column's nesta situação podem aceitar mais de uma criança
+              DecoratedBox(
         // BoxDecoration takes the image
         decoration: const BoxDecoration(
           // Image set to background of the body
@@ -23,33 +26,41 @@ class Informativa extends StatelessWidget {
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget> [ Text(peca.Nome,
-                   style: const TextStyle(
-                     color:  Color.fromARGB(226, 250, 188, 89),
-                     fontWeight: FontWeight.bold,
-                     fontSize: 40, 
-                     fontFamily: 'Forum',
-                   )
-                 ),
-                const SizedBox(height: 8,),
+                          children: <Widget> [ 
+                            
+                const SizedBox(height: 50,),
                ClipRRect(borderRadius: BorderRadius.circular(30),
               
                child: Container(
                  width: 450,
-                 height: 600,
-                 color: const Color.fromARGB(255, 202, 21, 8),
+                 height: 590,
+                 margin: const EdgeInsets.fromLTRB(20, 30, 20, 0),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(30),
+                  color: const Color.fromARGB(255, 202, 21, 8),
+                 ),
                 child: Column (
                  mainAxisAlignment: MainAxisAlignment.start, // para alinhar 
                  children: <Widget>[
-                   const SizedBox(height: 20,), //espaço
-                 Image.asset('img/poster.jpg', width: 400, height: 250, fit: BoxFit.cover,),
+                  Text(peca.Nome,
+                   style: const TextStyle(
+                     color:  Color.fromARGB(226, 250, 188, 89),
+                     fontWeight: FontWeight.bold,
+                     fontSize: 30, 
+                     fontFamily: 'Forum',
+                   )
+                 ),
+
+                   const SizedBox(height: 10,), //espaço
+                 ClipRRect(borderRadius: BorderRadius.circular(20),
+                 child: Image.asset('img/poster.jpg', width: 300, height: 300, fit: BoxFit.cover,),),
                  const SizedBox(height: 10,),
                  
                  const SizedBox(height: 3,),
                   Text(peca.DescDet,
                    style: const TextStyle(
                      color: Colors.white,
-                     fontSize: 16, 
+                     fontSize: 18, 
                      fontFamily: 'Open Sans',
                    )
                  ),
@@ -60,7 +71,7 @@ class Informativa extends StatelessWidget {
                    softWrap: true,
                    style: TextStyle(
                      color: Color.fromARGB(226, 250, 188, 89),
-                     fontSize: 16,
+                     fontSize: 20,
                      fontWeight: FontWeight.bold,
                      fontFamily: 'Open Sans',
                    ),
@@ -71,7 +82,7 @@ class Informativa extends StatelessWidget {
                    peca.Temporada,
                    style: const TextStyle(
                      color: Colors.white,
-                     fontSize: 16, 
+                     fontSize: 20, 
                      fontFamily: 'Open Sans',
                    )
                  ),
@@ -82,7 +93,7 @@ class Informativa extends StatelessWidget {
                    softWrap: true,
                    style: TextStyle(
                      color: Color.fromARGB(226, 250, 188, 89),
-                     fontSize: 16,
+                     fontSize: 20,
                      fontWeight: FontWeight.bold,
                      fontFamily: 'Open Sans',
                    ),
@@ -93,7 +104,7 @@ class Informativa extends StatelessWidget {
                    peca.Local,
                    style: const TextStyle(
                      color: Colors.white,
-                     fontSize: 16, 
+                     fontSize: 20, 
                      fontFamily: 'Open Sans',
                    ),
                  ),
@@ -103,7 +114,7 @@ class Informativa extends StatelessWidget {
                    peca.Data,
                    style: const TextStyle(
                      color: Colors.white,
-                     fontSize: 16, 
+                     fontSize: 20, 
                      fontFamily: 'Open Sans',
                    ),
                  ),
@@ -113,7 +124,7 @@ class Informativa extends StatelessWidget {
                
                ),
               ),
-              const SizedBox(height: 50,),
+              const SizedBox(height: 20,),
               ElevatedButton(
                    onPressed: () {
                      Navigator.pop(context);
@@ -131,6 +142,7 @@ class Informativa extends StatelessWidget {
                  ),
               ),
             )
+            ],),)
         ),
     );
     
