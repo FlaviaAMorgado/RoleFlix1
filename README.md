@@ -1,6 +1,6 @@
 # RoleFlix1
 - Nome do projeto: RolêFlix;
-- Integrantes: Daniel Bionde e Flavia Amaral Muniz Morgado;
+- Integrantes: Daniel Biondi e Flavia Amaral Muniz Morgado;
 - Descrição do projeto: Esse projeto escolar será um aplicativo informativo sobre as peças teatrais que ocorrem na Cidade de São Paulo. 
 
 
@@ -11,6 +11,6 @@
 [https://github.com/FlaviaAMorgado/RoleFlix1.wiki.git
 ](https://github.com/FlaviaAMorgado/RoleFlix1/wiki/Widgets-e-principais-parametros)
 
-3. Vídeo e print do funcionamento do App: *ADD LINK DO VIDEO*
+3. Vídeo e print do funcionamento do App: https://github.com/FlaviaAMorgado/RoleFlix1/wiki/V%C3%ADdeo-e-Prints-do-App
 
 4. Atualizações: https://github.com/FlaviaAMorgado/RoleFlix1/wiki/Atualiza%C3%A7%C3%B5es
