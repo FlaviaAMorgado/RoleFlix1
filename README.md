@@ -1,6 +1,6 @@
 # RoleFlix1
 - Nome do projeto: RolêFlix;
-- Integrantes: Evelyn Karina de Jesus Gonçalves e Flavia Amaral Muniz Morgado;
+- Integrantes: Daniel Bionde e Flavia Amaral Muniz Morgado;
 - Descrição do projeto: Esse projeto escolar será um aplicativo informativo sobre as peças teatrais que ocorrem na Cidade de São Paulo. 
 
 
