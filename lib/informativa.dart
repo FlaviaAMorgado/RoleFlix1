@@ -13,7 +13,9 @@ class Informativa extends StatelessWidget {
             // ignore: prefer_const_constructors
             body: SingleChildScrollView( //Configuração da ScrollView
               child: //SingleChild's só aceitam uma child, normalmente sendo um tipo de layout, no caso sendo uma column
-              Column(children: <Widget>[ //as column's nesta situação podem aceitar mais de uma criança
+              Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[ //as column's nesta situação podem aceitar mais de uma criança
               DecoratedBox(
         // BoxDecoration takes the image
         decoration: const BoxDecoration(
@@ -29,7 +31,8 @@ class Informativa extends StatelessWidget {
                           children: <Widget> [ 
                             
                 const SizedBox(height: 50,),
-               ClipRRect(borderRadius: BorderRadius.circular(30),
+               ClipRRect(
+                borderRadius: BorderRadius.circular(30),
               
                child: Container(
                  width: 450,
@@ -40,35 +43,42 @@ class Informativa extends StatelessWidget {
                   color: const Color.fromARGB(255, 202, 21, 8),
                  ),
                 child: Column (
-                 mainAxisAlignment: MainAxisAlignment.start, // para alinhar 
+                 mainAxisAlignment: MainAxisAlignment.center, // para alinhar 
                  children: <Widget>[
-                  Text(peca.Nome,
+                  Text(
+                    peca.Nome,
                    style: const TextStyle(
                      color:  Color.fromARGB(226, 250, 188, 89),
                      fontWeight: FontWeight.bold,
                      fontSize: 30, 
                      fontFamily: 'Forum', 
-                   )
+                   ),
+                   textAlign: TextAlign.center,
                  ),
 
-                   const SizedBox(height: 10,), //espaço
-                 ClipRRect(borderRadius: BorderRadius.circular(20),
-                 child: Image.asset(peca.PacaImg,
+                const SizedBox(height: 10,), //espaço
+                 ClipRRect(
+                  borderRadius: BorderRadius.circular(20),
+                 child: Image.asset(
+                  peca.PacaImg,
                   width: 300,
                    height: 300, 
-                   fit: BoxFit.cover,),),
-                 const SizedBox(height: 10,),
-                 
-                 const SizedBox(height: 3,),
-                  Text(peca.DescDet,
+                   fit: BoxFit.cover,),
+                   ),
+                 const SizedBox(height: 10,),        
+                Padding(padding: const EdgeInsets.symmetric(horizontal: 20),
+                 child: Text(
+                    peca.DescDet,
                    style: const TextStyle(
                      color: Colors.white,
                      fontSize: 15, 
                      fontFamily: 'Open Sans',
-                   )
+                   ),
+                  textAlign: TextAlign.justify, //justificar e alinhar ao centro
                  ),
+                ),
                
-                 const SizedBox(height: 5,),
+                 const SizedBox(height:20 ),
                  const Text(
                    "Temporada:",
                    softWrap: true,
