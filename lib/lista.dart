@@ -8,6 +8,7 @@ class Peca {
   final String Local;
   final String Data;
   final String PacaImg;
+   Uri Link;
 
- const Peca( this.ID, this.Nome,  this.DescDet, this.Temporada,this.Local, this.Data, this.PacaImg);
+  Peca( this.ID, this.Nome,  this.DescDet, this.Temporada,this.Local, this.Data, this.PacaImg, this.Link);
 }

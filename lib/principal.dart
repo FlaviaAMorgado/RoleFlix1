@@ -15,8 +15,8 @@ const descDet2 = '"Cantando na Chuva" é a versão teatral do famoso filme music
 
 class _PrincipalState extends State<Principal> {
   List<Peca> pecas = <Peca>[
-    const Peca(1, "Sobre Ratos e Homens", descDet1, "Até 30 de Junho", "Teatro FAAP", "Quartas e Quintas as 20h", "img/rato.jpeg"),
-    const Peca(2, "Singing in the Rain", descDet2, "Indisponivel", "Bela Vista", "Quarta a sexta as 20h", "img/singinPoster.jpg")
+    Peca(1, "Sobre Ratos e Homens", descDet1, "Até 30 de Junho", "Teatro FAAP", "Quartas e Quintas as 20h", "img/rato.jpeg", Uri.parse('https://www.google.com.br/')),
+    Peca(2, "Singing in the Rain", descDet2, "Indisponivel", "Bela Vista", "Quarta a sexta as 20h", "img/singinPoster.jpg", Uri.parse('https://www.google.com.br/'))
   ];
 
   @override

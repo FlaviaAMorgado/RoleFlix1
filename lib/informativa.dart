@@ -1,13 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:roleflix/lista.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Informativa extends StatelessWidget {
   const Informativa({super.key});
+
+  _launchURL(Uri url) async {
+    if(!await launchUrl(url)) {
+      throw Exception('Não foi possivel acessar o site');
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     final peca = ModalRoute.of(context)!.settings.arguments as Peca;
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
         title: "AppRoleFlix",
         home: Scaffold(
             // ignore: prefer_const_constructors
@@ -131,6 +139,9 @@ class Informativa extends StatelessWidget {
                      fontFamily: 'Open Sans',
                    ),
                  ),
+
+                  ElevatedButton(onPressed: _launchURL(peca.Link), child: const Text("Link"))
+
                ],
                  ),
                
