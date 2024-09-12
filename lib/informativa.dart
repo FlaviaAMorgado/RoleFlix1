@@ -5,7 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 class Informativa extends StatelessWidget {
   const Informativa({super.key});
 
-  _launchURL(Uri url) async {
+_launchURL(Uri url) async {
     if(!await launchUrl(url)) {
       throw Exception('Não foi possivel acessar o site');
     }
@@ -140,7 +140,20 @@ class Informativa extends StatelessWidget {
                    ),
                  ),
 
-                  ElevatedButton(onPressed: _launchURL(peca.Link), child: const Text("Link"))
+                  const SizedBox(height: 25,),
+              ElevatedButton(
+                   onPressed: () {
+                     _launchURL(peca.Link);
+                   },
+                    style: ElevatedButton.styleFrom(
+                    backgroundColor: const Color.fromARGB(255, 109, 10, 3), // Define a cor de fundo para vermelho
+                    ),
+                   child: const Text('Ver ingressos',
+                    style: TextStyle(
+                      color:  Colors.white,
+                    ),
+                   ),
+              ),
 
                ],
                  ),
